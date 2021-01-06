@@ -1,0 +1,97 @@
+/*THIS IS A DESIGN THAT I HAVE FOUND ON THE INTERNET, THE LOOKS WERE NOT MY CONCERN,
+ MY MAIN FOCUS ON THIS SIMPLE PROJECT WAS JS CODE*/
+
+
+
+:root {
+	--main-bg-color: rgb(37, 37, 37);
+	--main-text-color: #ffffff;
+}
+
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 16px;
+	background-color: var(--main-bg-color);
+	position: relative;
+	transition: all ease 0.2s;
+}
+
+.clock {
+	height: 18em;
+	width: 18em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main-bg-color);
+	background-image: url("clock.png");
+	background-position: center center;
+	background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top:30%;
+}
+.clock:before {
+	content: "";
+	height: 0.50rem;
+	width: 0.50rem;
+	background-color: var(--main-text-color);
+	border: 2px solid var(--main-bg-color);
+	position: absolute;
+	border-radius: 50%;
+	z-index: 1000;
+	transition: all ease 0.2s;
+}
+.hour,
+.min,
+.sec {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	border-radius: 50%;
+}
+.hour {
+	height: 10em;
+	width: 10em;
+}
+.hour:before {
+	content: "";
+	position: absolute;
+	height: 50%;
+	width: 6px;
+	background-color: var(--main-text-color);
+	border-radius: 6px;
+}
+.min {
+	height: 12em;
+	width: 12em;
+}
+.min:before {
+	content: "";
+	height: 50%;
+	width: 4px;
+	background-color: var(--main-text-color);
+	border-radius: 4px;
+}
+.sec {
+	height: 13em;
+	width: 13em;
+}
+.sec:before {
+	content: "";
+	height: 60%;
+	width: 2px;
+	background-color: rgb(255, 0, 255);
+	border-radius: 2px;
+}
+
